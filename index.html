@@ -117,7 +117,92 @@
     let tern = 6;
     (tern === 6) ? console.log('Nice!') : console.log("Dangit...");
 
+
+    let number = prompt('what is your favorite number')
+    if (number == 42) {
+      console.log("Yay! That's my favorite too!");
+    } else if (number < 42) {
+      console.log("Eh, that's OK but " + (parseInt(number, 10)+1) + " would be even better");
+    } else {
+      console.log("LAME. That number is too large!");
+    }
+
+    /* Functions and return values */
+    function squared(num) {
+      return num * num;
+    }
+    console.log(squared(4));
+
+    function cubed(num) {
+      return num * num * num;
+    }
+    console.log(cubed(4));
+
+    function factorial(num) {
+      var i = num;
+      while (i > 1) {
+        num *= i-1;
+        i--;
+      }
+      return num;
+    }
+    console.log(factorial(4));
+
+    function motivationalMessage() {
+      console.log("You've got this!");
+    }
+    motivationalMessage();
+
+    function setParameters(first, last) {
+      console.log("Welcome back to our site " + first + " " + last + ".");
+    }
+    setParameters('Jane', 'Doe'); // These parameters are input into the function
+
+    let worker1 = "John Doe";
+    let worker2 = "Jimmy Foo";
+    let order1 = ", you will defend this secret with your life";
+    let order2 = ", you will go find help!";
+    let order3 = ", wait here."
+    function makeOrder(person, directions) {
+      console.log(person + directions);
+    }
+    makeOrder(worker1, order1);
+    makeOrder(worker2, order3);
+
+    /* Function expression and Arrows */
+    // Assign a variable to a function
+    let makeGreeting = function() {
+      console.log("Hello.")
+    };
+    // and reuse
+    let sayHello = makeGreeting;
+    makeGreeting();
+    sayHello();
+    
+    //TOP practice
+    function add7(num) {
+      return num + 7;
+    }
+
+    function multiply(num1, num2) {
+      return num1 * num2;
+    }
+    console.log(multiply(2, 3));
+
+    function capitalize(string) {
+      string = string.toLowerCase(); //Initially sets all to lowercase in case of error
+      return string[0].toUpperCase() + string.slice(1); //Capitalizes the first letter and the returns the rest of the string
+    }
+    console.log(capitalize("where Are We?"));
+
+    function lastLetter(small) {
+      return small.slice(-1);
+    }
+    console.log(lastLetter("abcd"));
+
     </script>
+
+    
 
 
 
