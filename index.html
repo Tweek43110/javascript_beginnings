@@ -47,16 +47,79 @@
     /* Some JS method practice */
     console.log(myName.length);
 
-    var fruit = "Apple, Banana, Kiwi";
-    var yellowFruit = str.slice(7, 13);
-    console.log(res)
+    let fruit = "Apple, Banana, Kiwi";
+    let yellowFruit = fruit.slice(7, 13);
+    console.log(yellowFruit);
 
     let chips = "Lays";
-    chips = str.replace("Lays", "Doritios");
+    chips = chips.replace("Lays", "Doritios");
     /* Global string replacement! */ 
     let quote = "'common sense is not so common'-Chester Cheetah";
-    quote = str.replace(/common/g, "super");
-  </script>
+    quote = quote.replace(/common/g, "super");
+
+    /* Comparison operators */
+    console.log("3 < 6");
+    console.log(6 > 3);
+    console.log(5 == "5");
+    console.log(5 === "5");
+    
+    /* Logical operators */
+    /* || OR,  && AND, ! NOT*/
+    let score = 10
+    if ( score <= 1 || score >= 50) {
+      console.log("You didnt make the cut.");
+    }
+
+    let choice = "Good guy";
+    let answer = "Yes";
+    if (choice = "Good guy" && answer == "Yes") {
+      console.log("You have made the right choice!")
+    }
+
+    console.log(!true);
+    console.log( null || 2 && 3 || 4 );
+
+    let age = 19;
+    if (age <= 13 || age >= 91) {
+      console.log("You are outside the range.");
+    }
+
+    /* Conditional Statements */
+    let hour = 12;
+    if (hour > 9 || hour < 5) {
+      console.log("Get to work!");
+    } else if (hour == 6) {
+      console.log("Go home");
+    } else {
+      console.log("Enjoy your free time!");
+    }
+
+    /* Switch statements and a little function action */
+    function chooseWeather(weather) {
+      switch (weather) {
+        case 'sunny':
+          console.log("Get out and enjoy it.");
+          break;
+        case 'cloudy':
+          console.log("It could be worse.");
+          break;
+        case 'rainy':
+          console.log("Don't forget your umbrella.");
+          break;
+        case 'snowy':
+          default:
+          console.log("I'd just stay in.");
+      }
+    }
+    chooseWeather('rainy')
+  
+    /* Ternary operators: an alternative to a single if...else */
+    let tern = 6;
+    (tern === 6) ? console.log('Nice!') : console.log("Dangit...");
+
+    </script>
+
+
 
   <h1>JavaScript practice, check the log</h1>
 </body>
